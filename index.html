@@ -1,0 +1,248 @@
+<!-- TO RUN IN BROWSER:
+    1. Install vscode extension Name: open in `browser open-in-browser` by TechER
+    2. Right click html file and either run in default browser or another browser
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML/CSS Studio</title>
+    <!-- import CSS styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400&display=swap"
+    />
+  </head>
+
+  <!-- page content goes into <body> -->
+  <body>
+    <div id="title">
+      <h1>Responsive Redesign Handin</h1>
+    </div>
+    <div id="portfolio-readiness">
+      <div>
+        <h2>Portfolio Readiness: Introduction</h2>
+        <p>
+          This is my second project for CSCI 1300: User Interfaces and User
+          Experiences. In this assignment, I had the opportunity to redesign a
+          website of my choice to include better design principles, including
+          responding to different screen sizes. Throughout the process, I had
+          the chance to brainstorm, sketch, create low-fidelity and
+          high-fidelity wireframes, and ultimately use vanilla HTML and CSS to
+          create the redesigned website.
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div id="part1">
+      <div>
+        <h2>Part 1: Identifying Usability Problems</h2>
+        <p>
+          In this section, I picked my website and analyzed its problems,
+          including those relating to general use as well as accessibility.
+        </p>
+        <div id="picking-webpage">
+          <h3>Picking a Webpage</h3>
+          <p>
+            Link to the website:
+            <a href="https://www.glocesterri.gov/towncouncil.htm">Here</a>
+          </p>
+          <p>
+            Screenshot (note that the website continues below the screenshot;
+            navigate to the link to see the page in its entirety):
+          </p>
+          <img
+            id="original-site"
+            alt="Screenshot of the original website that I redesigned for this project."
+            src="./assets/website_screenshot.png"
+          />
+          <p>
+            Why I chose it: Choosing a website was actually somewhat of a
+            challenge for me, but I followed the advice on the handout and
+            looked at local government websites, eventualy finding one neaby
+            Providence; I chose it since the design immediately to me looked to
+            be in need of improvement, and there was no responsiveness to mobile
+            use, which I was actually on at the time of finding the website.
+          </p>
+        </div>
+        <div id="problems">
+          <h3>Finding Problems</h3>
+          <p>There were some primary issues with this site:</p>
+          <ul>
+            <li>
+              In the table for the agendas and minutes the agenda and minutes
+              documents for a partpicular meeting are not necessarily
+              horizontally aligned, which can create confusion and unnecessary
+              extra scanning
+            </li>
+            <li>
+              While there is clear delineation for seperate years, there is none
+              for months, making it somewhat challenging to locate a specific
+              month's agenda/minutes
+            </li>
+            <li>
+              There is no responsive redesign for a mobile app, meaning users
+              are relegated to the same interface whose proportions are not
+              ideal on a small screen size
+            </li>
+          </ul>
+          <p>
+            All of these problems can lead to issues with learnability,
+            memorability, and efficiency:
+          </p>
+          <ul>
+            <li>
+              Learnability: the interface is relatively simple, although the
+              problems I brough up could make using the interface to locate
+              certain agendas/minutes more challenging than necessary
+            </li>
+            <li>
+              Memorability: returning users may have trouble memorizing the
+              specific place of a certain link to an agenda/minutes document and
+              then may have to search the entire table again
+            </li>
+            <li>
+              Efficiency: frequent users could have the same troubles as only
+              semi-frequent returning users, where it is very hard to memorize
+              the specific location of one of the document links; additionally,
+              for every new meeting, the table is shifted downward, further
+              complicating the issue of being able to remember a specific
+              location
+            </li>
+          </ul>
+        </div>
+        <div id="accessibility">
+          <h3>Accessibility</h3>
+          <p>
+            In order to consider accessibility, I generated a WebAIM WAVE
+            report.
+          </p>
+          <p>Here is a screenshot of part of the report:</p>
+          <img
+            id="original-site"
+            alt="Screenshot of the WebAIM WAVE reoprt for the original version of the website I redesigned."
+            src="./assets/webaim_wave.png"
+          />
+          <p>
+            Link to the report:
+            <a
+              href="https://wave.webaim.org/report#/https://www.glocesterri.gov/towncouncil.htm"
+              >Here</a
+            >
+          </p>
+          <p>
+            The report emphasizes issues relating to color contrast, especially
+            as it relates to the links within the table to the agendas/minutes.
+            Additionally, the color of the email links, being the same, also
+            does not have sufficient contrast. Just looking at the page, while
+            the contrast does seem sufficient, the color itself used for the
+            links is bright and hard to read, making it perhaps not ideal for
+            text.
+          </p>
+          <p>
+            The report also references some other more behind the scenes issues
+            with the page. No tiered headings (h1, h2, etc.) are used in the
+            site, which is problematic since those using a screen reader need
+            those headings to help provide structure to the page so they can
+            understand it. Additionally, the report noted that the logo image
+            lacked alt text, another accesssibility issue for individuals who
+            make use of a screen reader.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div id="part2">
+      <div>
+        <h2>Part 2: Visual Redesign</h2>
+        <p>
+          In this segment of the project, I developed my redesign, starting with
+          simple speed sketches to brainstorm and ultimately ending up with
+          high-fidelity mockups made in Figma that closely mirror the final
+          page.
+        </p>
+        <div id="speed-sketching">
+          <h3>Speed Sketching</h3>
+          <p>
+            I did some speed sketching to brainstorm ideas for my redesign. Here
+            are my 9 sketches, completed one per minute:
+          </p>
+        </div>
+        <div id="final-sketch">
+          <h3>Final Sketch</h3>
+          <p>
+            Shown here is my final sketch for my redesign. This final sketch
+            includes various design elements from my speed sketches.
+          </p>
+        </div>
+        <div id="lo-fi">
+          <h3>Low Fidelity Mockups</h3>
+          <p>
+            Here are my three low-fidelity mockups, each for a different screen
+            size. Note also my annotations on them that indicate how they solve
+            the problems I discussed earlier.
+          </p>
+        </div>
+        <div id="visual-style-guide">
+          <h3>Visual Style Guide</h3>
+          <p>
+            Here is my visual style guide. I used this as a basis for the design
+            of my high-fidelity mockups and ultimately my final site design.
+          </p>
+        </div>
+        <div id="hi-fi">
+          <h3>High Fidelity Mockups</h3>
+          <p>
+            Here are my three high-fidelity mockups, each for a different screen
+            size. They bear significant resemblance to my final redesigned site
+            coded using HTML and CSS.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div id="part3">
+      <div>
+        <h2>Part 3: Responsive Redesign</h2>
+        <p>
+          In this final component of the project, I created my redesigned
+          website using HTML and CSS, utilizing flex boxes and media queries to
+          allow for responsiveness.
+        </p>
+        <p>
+          Link to my redesigned site:
+          <a href="https://davideskilson.github.io/Responsive_Redesign/"
+            >Here</a
+          >
+        </p>
+        <p>Here are some screenshots at different screen sizes: insert here</p>
+      </div>
+    </div>
+    <hr />
+    <div id="portfolio-readiness">
+      <div>
+        <h2>Portfolio Readiness: Conclusion and Reflections</h2>
+        <p>
+          Over the course of the assignment, I have had the chance to both
+          improve my skills as a designer as well as develop improved thinking
+          patterns relating to design. Regarding the former, I got my first true
+          experiene using Figma to create a visual style guide and mockups; I
+          also got the chance to use vanilla HTML and CSS (including media
+          queries) to create a full-fledged website, modulo the interactive
+          components. Considering my improved designer mindset, I had the chance
+          to think about the design principles we have discussed in class such
+          as font choices, layout, color, visual hierachy, etc. and apply them
+          to a real world scenario. Overall, I am pleased with what I have
+          accomplished and I look forward to developing these skills in future
+          assignments.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
